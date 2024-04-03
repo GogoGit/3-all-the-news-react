@@ -117,7 +117,7 @@ li.logo img {
 
 .entry {
   display: grid;
-  grid-template-columns: 1fr 7fr;
+  grid-template-columns: 3fr 7fr;
   grid-column-gap: 1rem;
   margin-bottom: 1rem;
   grid-area: "entry";

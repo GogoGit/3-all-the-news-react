@@ -1,11 +1,20 @@
-const Nav = (props) => {
+import NavItem from "./NavItem";
+
+//Destructure setSection, Prop Drilling setSection={setSection} (from app.jsx)
+const Nav = ({ navItems, setSection, section }) => {
   return (
     <nav>
       <ul>
-        {props.navItems.map((navItem) => (
-          <li key={navItem}>
-            <a href={`#{navItem}`}>{navItem}</a>
-          </li>
+        {navItems.map((navItem, index) => (
+          // <li key={navItem}>
+          //   <a href={`#${navItem}`}>{navItem}</a>
+          // </li>
+          <NavItem
+            key={index}
+            navItem={navItem}
+            setSection={setSection}
+            section={section}
+          />
         ))}
       </ul>
     </nav>
